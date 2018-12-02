@@ -3,7 +3,7 @@
 VERSION_TAG="v001"
 
 echo -e "\nCloning repo..."
-git clone https://github.com/IBM/ibmcloud-object-storage-plugin.git
+git clone https://github.com/adamjm/ibmcloud-object-storage-plugin.git
 git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 
 echo -e "\nSpinning builder image..."

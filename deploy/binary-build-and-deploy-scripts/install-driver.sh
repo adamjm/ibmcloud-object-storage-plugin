@@ -34,7 +34,8 @@ chmod 600 /host/root/.ssh/authorized_keys
 
 touch /host/etc/ssh/sshd_config
 sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /host/etc/ssh/sshd_config
-/root/bin/systemutil -service ssh.service
+/root/bin/systemutil -service ssh.service || /root/bin/systemutil -service sshd.service
+
 
 ssh -o StrictHostKeyChecking=no root@localhost bash /root/install-dep.sh
 
